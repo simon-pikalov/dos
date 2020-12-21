@@ -20,7 +20,7 @@ class Log(threading.Thread):
         self.file = open(self.file_name, "a")
         self.init_time = time.time()
         self.ip = ip
-        self.sleep_time = 0.001
+        #self.sleep_time = 0.001
 
     def write_to_log(self,result):
         line_str =str(time.ctime())+","+ str(result)+"\n"
@@ -31,7 +31,7 @@ class Log(threading.Thread):
     def run(self):
         while (True):
             try:
-                time.sleep(self.sleep_time)
+                #time.sleep(self.sleep_time)
                 time_str = str(datetime.now().strftime("%H:%M:%S.%f"))
                 result = subprocess.check_output(['ping', '-c 1', self.ip])
                 result = time_str+" "+str(result)
