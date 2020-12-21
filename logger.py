@@ -36,7 +36,7 @@ class Log(threading.Thread):
                 result = subprocess.check_output(['ping', '-c 1', self.ip])
                 result = time_str+" "+str(result)
                 self.write_to_log(result)
-                print(result)
+                # print(result)
             except:
                 print("exeption")
 
