@@ -22,10 +22,15 @@ struct pseudo_header    //needed for checksum calculation
 };
 
 void printTime(int i){
-    char buff[100];
-    time_t now = time (0);
-    strftime (buff, 100, "%Y-%m-%d %H:%M:%S.000", localtime (&now));
-    printf ("%s ,%d\n", buff,i);
+    time_t timer;
+    char buffer[26];
+    struct tm* tm_info;
+
+    timer = time(NULL);
+    tm_info = localtime(&timer);
+
+    strftime(buffer, 26, "%Y-%m-%d %H:%M:%S", tm_info);
+    printf ("%s ,%d\n", buffer,i);
 }
 
 unsigned short csum(unsigned short *ptr,int nbytes) {

