@@ -6,13 +6,13 @@ ping_c = []
 ping_python = []
 with open("c.csv","r") as f:
     for line in f:
-        print(line)
+        # print(line)
         a = re.search(r'\b(time=)\b', line)
         ping_time = line[a.end():a.end()+5]
         print(a.start(),a.end())
         print(ping_time)
         time = line[11:19]
-        print(time)
+        # print(time)
         ping_c.append(ping_time)
 
 
@@ -35,6 +35,14 @@ font = {'family': 'serif',
         }
 np_arr_c = np.array(ping_c).astype('float64')
 np_arr_python = np.array(ping_python).astype('float64')
+std_c = np.std(np_arr_c)
+avarage_c = np.average(np_arr_c)
+print(f"average for c is {avarage_c} and std is {std_c}")
+
+std_python = np.std(np_arr_python)
+avarage_python = np.average(np_arr_python)
+print(f"average for c is {avarage_python} and std is {std_python}")
+
 
 plt.yticks(np.arange(min(np_arr_c), max(np_arr_c), 1))
 plt.title( "python and c compression", fontdict=font)
