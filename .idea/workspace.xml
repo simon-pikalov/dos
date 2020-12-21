@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cccce63a-18e6-4658-bf7b-617fd6900d1b" name="Default Changelist" comment="" />
+    <list default="true" id="cccce63a-18e6-4658-bf7b-617fd6900d1b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atack.c" beforeDir="false" afterPath="$PROJECT_DIR$/atack.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dos_raw.py" beforeDir="false" afterPath="$PROJECT_DIR$/dos_raw.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +50,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.dos_raw">
+    <configuration name="dos_raw" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dos" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dos_raw.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="plot" type="PythonConfigurationType" factoryName="Python" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,6 +97,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dos_raw" />
         <item itemvalue="Python.plot" />
       </list>
     </recent_temporary>
@@ -87,6 +114,7 @@
       <updated>1608545150156</updated>
       <workItem from="1608545153340" duration="3453000" />
       <workItem from="1608550409399" duration="1635000" />
+      <workItem from="1608552374699" duration="1605000" />
     </task>
     <servers />
   </component>
@@ -110,32 +138,33 @@
       <screen x="2560" y="0" width="2048" height="1112" />
     </state>
     <state x="3039" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608551597131" />
-    <state x="3300" y="134" key="#plot" timestamp="1608552275548">
+    <state x="3300" y="134" key="#plot" timestamp="1608552555471">
       <screen x="2560" y="0" width="2048" height="1112" />
     </state>
-    <state x="3300" y="134" key="#plot/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608552275548" />
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1608552364085">
+    <state x="3300" y="134" key="#plot/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608552555471" />
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1608555775136">
       <screen x="2560" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608552364085" />
-    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1608552364084">
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608555775136" />
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1608555775136">
       <screen x="2560" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.center/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608552364084" />
-    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1608552364084">
+    <state width="2005" height="305" key="GridCell.Tab.0.center/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608555775136" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1608555775136">
       <screen x="2560" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.left/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608552364084" />
-    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1608552364085">
+    <state width="2005" height="305" key="GridCell.Tab.0.left/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608555775136" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1608555775136">
       <screen x="2560" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.right/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608552364085" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608555775136" />
     <state x="3093" y="201" key="SettingsEditor" timestamp="1608551587952">
       <screen x="2560" y="0" width="2048" height="1112" />
     </state>
     <state x="3093" y="201" key="SettingsEditor/2560.0.2048.1112/0.0.2048.1112@2560.0.2048.1112" timestamp="1608551587952" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dos$dos_raw.coverage" NAME="dos_raw Coverage Results" MODIFIED="1608555730565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dos$plot.coverage" NAME="plot Coverage Results" MODIFIED="1608552555601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

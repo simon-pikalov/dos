@@ -8,6 +8,7 @@
 #include<errno.h> //For errno - the error number
 #include<netinet/tcp.h>	//Provides declarations for tcp header
 #include<netinet/ip.h>	//Provides declarations for ip header
+#include <time.h>
 
 struct pseudo_header    //needed for checksum calculation
 {
@@ -19,6 +20,13 @@ struct pseudo_header    //needed for checksum calculation
 
 	struct tcphdr tcp;
 };
+
+void printTime(int i){
+    char buff[100];
+    time_t now = time (0);
+    strftime (buff, 100, "%Y-%m-%d %H:%M:%S.000", localtime (&now));
+    printf ("%s ,%d\n", buff,i);
+}
 
 unsigned short csum(unsigned short *ptr,int nbytes) {
 	register long sum;
@@ -43,8 +51,12 @@ unsigned short csum(unsigned short *ptr,int nbytes) {
 	return(answer);
 }
 
+
+
+
 int main (void)
 {
+
 	//Create a raw socket
 	int s = socket (PF_INET, SOCK_RAW, IPPROTO_TCP);
 	//Datagram to represent the packet
@@ -119,6 +131,7 @@ int main (void)
 	//Uncommend the loop if you want to flood :)
 	for (int i = 0 ; i < 1000000;i++)
 	{
+	    printTime(i);
 		//Send the packet
 		if (sendto (s,		/* our socket */
 					datagram,	/* the buffer containing headers and data */
@@ -130,10 +143,7 @@ int main (void)
 			printf ("error\n");
 		}
 		//Data send successfully
-		else
-		{
-			printf ("Packet Send \n");
-		}
+
 	}
 
 	return 0;
