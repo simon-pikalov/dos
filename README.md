@@ -17,9 +17,9 @@ I decited to used raw socket in python in a si,ilar yaw to c .
 ![](photo/b.JPG)
 
 # wireshark python
-![](photo/wirehark_python.JPG)
+![](photo/wireshak_python.png)
 # wireshark c
-![](/photo/wireshark_c.JPG)
+![](photo/wireshark_c.png)
 
 
 
